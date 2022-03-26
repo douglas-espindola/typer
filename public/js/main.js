@@ -1,7 +1,12 @@
 var tempoInicial = $("#tempo-digitacao").text();
 
-function atualizaTamanhoFrase() {
+$(document).ready(function () {
+  atualizaTamanhoFrase();
+  inicializaContadores();
+  inicializaCronometro();
+});
 
+function atualizaTamanhoFrase() {
   var frase = $(".frase").text();
   var numeroPalavras = frase.split(" ").length;
   var tamanhoFrase = $("#tamanho-frase");

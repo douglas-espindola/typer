@@ -5,25 +5,37 @@
     <meta charset="UTF-8">
     <title>Typer</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
     <div class="container">
         <h1 class="center">Máquina de escrever</h1>
-        <p class="frase center">Agora vou testar o número de palavras
+        <p class="frase center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis omnis architecto repellat
+            vel sint et earum, beatae modi veritatis veniam aliquam sapiente accusamus reprehenderit nihil, qui odit
+            aperiam, cum voluptatem?
         </p>
 
         <ul class="informações center">
             <li>
-                <span id="tamanho-frase">0</span>
+                <i class="small material-icons icones">description</i>
+                <span id="tamanho-frase">5</span>
                 Palavras
             </li>
-            <li><span id="tempo-digitacao">5</span> Segundos</li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="tempo-digitacao">10</span> Segundos
+            </li>
         </ul>
 
         <textarea class="campo-digitacao" cols="40" rows="10"></textarea>
-        <button id="botao-reinicia">Reiniciar</button>
+
+        <div class="botoes">
+            <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reinicia">
+                <i class="material-icons">restore</i>
+            </a>
+        </div>
 
         <ul class="center">
             <li><span id="contador-caracteres">0</span> Caracateres</li>

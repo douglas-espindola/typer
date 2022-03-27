@@ -1,6 +1,6 @@
+var tempoRestante = $("#tempo-digitacao").text();
 var tempoInicial = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
-var tempoRestante = $("#tempo-digitacao").text();
 
 $(function () {
   atualizaTamanhoFrase();
@@ -30,14 +30,15 @@ function inicializaContadores() {
 }
 
 function inicializaCronometro() {
+  var tempoRestante = $("tempo-digitacao").text();
   campo.one("focus", function () {
     var cronometroId = setInterval(function () {
       tempoRestante--;
       $("#tempo-digitacao").text(tempoRestante);
-
       if (tempoRestante < 1) {
         campo.attr("disabled", true);
         clearInterval(cronometroId);
+        campo.addClass("campo-desativado");
       }
     }, 1000);
   });

@@ -5,29 +5,32 @@
     <meta charset="UTF-8">
     <title>Typer</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <h1>Máquina de escrever</h1>
+    <div class="container">
+        <h1 class="center">Máquina de escrever</h1>
+        <p class="frase center">Agora vou testar o número de palavras
+        </p>
+
+        <ul class="informações center">
+            <li>
+                <span id="tamanho-frase">0</span>
+                Palavras
+            </li>
+            <li><span id="tempo-digitacao">5</span> Segundos</li>
+        </ul>
+
+        <textarea class="campo-digitacao" cols="40" rows="10"></textarea>
+        <button id="botao-reinicia">Reiniciar</button>
+
+        <ul class="center">
+            <li><span id="contador-caracteres">0</span> Caracateres</li>
+            <li><span id="contador-palavras">0</span> Palavras</li>
+        </ul>
+    </div>
 </body>
-<p class="frase">Agora vou testar o número de palavras
-</p>
-
-<ul class="informações">
-    <li>
-        <span id="tamanho-frase">0</span>
-        Palavras
-    </li>
-    <li><span id="tempo-digitacao">5</span> Segundos</li>
-</ul>
-
-<textarea class="campo-digitacao" cols="40" rows="10"></textarea>
-<button id="botao-reinicia">Reiniciar</button>
-
-<ul>
-    <li><span id="contador-caracteres">0</span> Caracateres</li>
-    <li><span id="contador-palavras">0</span> Palavras</li>
-</ul>
 
 <script src="/public/js/jquery.js"></script>
 <script src="/public/js/main.js"></script>

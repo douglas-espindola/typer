@@ -46,6 +46,7 @@ function inicializaCronometro() {
 function finalizaJogo() {
   campo.attr("disabled", true);
   campo.toggleClass("campo-desativado");
+  inserePlacar();
 }
 
 function inicializaMarcadores() {
@@ -62,6 +63,19 @@ function inicializaMarcadores() {
 
     }
   });
+}
+
+function inserePlacar() {
+  var corpoTabela = $(".placar").find("tbody");
+  var usurio = "Douglas";
+  var numPalavras = $("#contador-palavras").text();
+
+  var linha = "<tr>" +
+    "<td>" + usurio + "</td>" +
+    "<td>" + numPalavras + "</td>" +
+    "</tr>";
+
+  corpoTabela.append(linha);
 }
 
 function reiniciaJogo() {

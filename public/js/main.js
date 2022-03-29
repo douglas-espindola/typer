@@ -30,18 +30,22 @@ function inicializaContadores() {
 }
 
 function inicializaCronometro() {
-  var tempoRestante = $("tempo-digitacao").text();
+  var tempoRestante = $("#tempo-digitacao").text();
   campo.one("focus", function () {
     var cronometroId = setInterval(function () {
       tempoRestante--;
       $("#tempo-digitacao").text(tempoRestante);
       if (tempoRestante < 1) {
-        campo.attr("disabled", true);
         clearInterval(cronometroId);
-        campo.toggleClass("campo-desativado");
+        finalizaJogo();
       }
     }, 1000);
   });
+}
+
+function finalizaJogo() {
+  campo.attr("disabled", true);
+  campo.toggleClass("campo-desativado");
 }
 
 function inicializaMarcadores() {

@@ -24,3 +24,11 @@
 .borda-vermelha{
   border: 6px solid red;
 }
+
+.placar{
+  display: none;
+}
+
+.doby{
+  overflow: scroll;
+}

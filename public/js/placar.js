@@ -1,3 +1,5 @@
+$("#botao-placar").click(mostraPlacar);
+
 function inserePlacar() {
   var corpoTabela = $(".placar").find("tbody");
   var usurio = "Douglas";
@@ -31,4 +33,8 @@ function novaLinha(usurio, palavras) {
 function removeLinha() {
   event.preventDefault();
   $(this).parent().parent().remove();
+}
+
+function mostraPlacar() {
+  $(".placar").toggle();
 }

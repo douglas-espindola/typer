@@ -32,8 +32,12 @@ function novaLinha(usurio, palavras) {
 
 function removeLinha() {
   event.preventDefault();
-  $(this).parent().parent().fadeOut();
-  $(this).parent().parent().remove();
+  $(this).parent().parent().fadeOut(1000);
+
+  setTimeout(function () {
+    $(this).parent().parent().remove();
+  }, 1000)
+
 }
 
 function mostraPlacar() {

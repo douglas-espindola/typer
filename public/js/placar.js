@@ -32,6 +32,7 @@ function novaLinha(usurio, palavras) {
 
 function removeLinha() {
   event.preventDefault();
+  $(this).parent().parent().fadeOut();
   $(this).parent().parent().remove();
 }
 

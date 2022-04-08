@@ -16,10 +16,7 @@ function inserePlacar() {
 function scrollPlacar() {
   var posicaoPlacar = $(".placar").offset().top;
 
-  $("body").animate(
-    {
-      scrollTop: posicaoPlacar + "px"
-    }, 1000);
+  $("body").animate({ scrollTop: posicaoPlacar + "px" }, 1000);
 }
 
 function novaLinha(usurio, palavras) {

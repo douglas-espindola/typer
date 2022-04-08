@@ -8,7 +8,18 @@ function inserePlacar() {
   var linha = novaLinha(usurio, numPalavras);
   linha.find(".botao-remover").click(removeLinha);
 
-  corpoTabela.append(linha);
+  corpoTabela.prepend(linha);
+  $(".placar").slideDown(500);
+  scrollPlacar();
+}
+
+function scrollPlacar() {
+  var posicaoPlacar = $(".placar").offset().top;
+
+  $("body").animate(
+    {
+      scrollTop: posicaoPlacar + "px"
+    }, 1000);
 }
 
 function novaLinha(usurio, palavras) {

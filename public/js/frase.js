@@ -1,5 +1,5 @@
 $("#botao-frase").click(fraseAleatoria);
 
 function fraseAleatoria() {
-  console.log("aqui");
+  $.get("http://localhost:3000/frases");
 }

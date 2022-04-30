@@ -10,6 +10,10 @@ $(function () {
   $("#botao-reiniciar").click(reiniciaJogo);
 });
 
+function atualizaTempoInicial(tempo) {
+  $("#tempo-digitacao").text(tempo);
+}
+
 function atualizaTamanhoFrase() {
   var frase = $(".frase").text();
   var numeroPalavras = frase.split(" ").length;

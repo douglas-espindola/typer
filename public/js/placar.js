@@ -76,3 +76,12 @@ function sincronizaPlacar() {
     console.log("Salvou o placar no servidor");
   })
 }
+
+function atualizarPlacar() {
+  $.get("http://localhos:300/placar", function (data) {
+    $(data).each(function () {
+      var linha = novaLinha(this.usuario, this.pontos);
+      $("tbody").append(linha);
+    });
+  });
+}
